@@ -75,3 +75,4 @@ end)
 CheatSec:NewButton("Red Box", "Pee  pee", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/C0ms/Red-Box-Script/main/Source"))();
 end)
+  
