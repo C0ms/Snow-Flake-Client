@@ -75,4 +75,27 @@ end)
 CheatSec:NewButton("Red Box", "Pee  pee", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/C0ms/Red-Box-Script/main/Source"))();
 end)
-  
+
+CheatSec:NewButton("Pro piece", "Pee  pee", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/ProPiecePro'),true))()
+end)
+
+CheatSec:NewButton("FNF", "ca   ca", function()
+    CheatSec:NewButton("Pro piece", "Pee  pee", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/ProPiecePro'),true))()
+end)
+end)
+
+--Settings--
+
+local SetTab = Window:NewTab("Settings")
+
+local SetSection = SetTab:NewSection("Settings")
+
+SetSection:NewButton("AntiLock", "Prevents the user from being locked onto", function()
+    local plr = game.Players.LocalPlayer
+local Chara = plr.Character
+local Move = -20d
+
+Chara.Torso.Neck.C0.Position = Vector3.new(0,Move,0)
+end)
