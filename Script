@@ -1,0 +1,77 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("SnowFlakeHub", "BloodTheme")
+
+--Universal Scripts--
+
+local UniTab = Window:NewTab("-Universal Scripts-")
+local UniSection = UniTab:NewSection("--Universal Scripts--")
+
+UniSection:NewSlider("Speed", "VRRRRRRRRMM", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+UniSection:NewSlider("Jump", "BOINGGG!!", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+--Cheats--
+
+local CheatTab = Window:NewTab("-Cheats-")
+
+local CheatSec = CheatTab:NewSection("--Cheats--")
+
+CheatSec:NewButton("PHANTOM FORCES", "Loads PF hacks must be in pf", function()
+  loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()  
+end)
+
+CheatSec:NewButton("ARSENAL", "hack oop", function()
+    _G.lockMeth = "Random" -- Change to head if you want your silent aim to ONLY aim at the head.
+ 
+_G.silMeth = "FPORWIL" -- Silent Aim Method, You're gonna have to play around with it. The Default one is FindPartOnRayWithIgnoreList but shortened. 
+ 
+_G.AntiFly = false -- Change if the game you're playing has an Anti-Fly. Set it to false, if it has, set it to true, if it doesn't.
+ 
+_G.Keystrokes = true -- If you want sexy keystrokes, turn it on.
+ 
+_G.HideOverlay = false -- If you want the StormWare Watermark along with the features you've toggled shown, set it to true, not recommended for closet cheating.
+ 
+ 
+ 
+local g = game:HttpGet("https://raw.githubusercontent.com/Storm99999/whitelistkeys/main/lite/sw.lite.lua")
+ 
+loadstring(g:reverse())()
+ 
+task.wait(2)
+ 
+if _G.HideOverlay == true then
+ 
+    game.CoreGui["StormWare LITE"].modules.Visible = false
+ 
+end
+ 
+game.CoreGui["StormWare LITE"].keystrokes.space.Text = "Snowflâe Client"
+end)
+
+CheatSec:NewButton("JailBreak", "Loads jailbreak scripts dumbass", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
+end)
+
+CheatSec:NewButton("Micheals Zombies", "does anyone read this bull shit", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Michael's%20Zombies/MichaelsZombiesGUI"))()
+end)
+
+CheatSec:NewButton("FTF", "pee pee poo poo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ohimju/ju/main/ftf.lua"))()
+end)
+
+CheatSec:NewButton("Trident Suv", "Trident suv/if a", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Trident-Survival-GUI-5546", true))()
+end)
+
+CheatSec:NewButton("Peak Fruits", "be a bitch nigga and hack instead of grinding you fucking cum slut loser pussy", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
+
+CheatSec:NewButton("Red Box", "Pee  pee", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/C0ms/Red-Box-Script/main/Source"))();
+end)
