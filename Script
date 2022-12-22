@@ -97,11 +97,13 @@ SetSection:NewButton("AntiLock", "Prevents the user from being locked onto", fun
 local Chara = plr.Character
 local Move = -10
 for i , p in pairs(Chara:GetChildren()) do
+while wait(.1) do
 	if p.Name == "Head" then
 p.CanCollide = true
 end
+end
 	if p.Name == "Torso" then
-	while wait(1) do
+	while wait(.1) do
 		for i , a in pairs(p:GetChildren()) do
 			if a.Name == "Neck" and a:IsA("Motor6D") then
 				a.C0 = CFrame.new(0,Move * 10,100)
