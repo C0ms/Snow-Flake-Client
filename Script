@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("SnowFlakeHub", "BloodTheme")
+local Window = Library.CreateLib("C0msHub", "Sentinel")
 
 --Universal Scripts--
 
@@ -72,44 +72,14 @@ CheatSec:NewButton("Peak Fruits", "be a bitch nigga and hack instead of grinding
     loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
 end)
 
-CheatSec:NewButton("Red Box", "Pee  pee", function()
+CheatSec:NewButton("Red Box", "pew pew", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/C0ms/Red-Box-Script/main/Source"))();
 end)
 
-CheatSec:NewButton("Pro piece", "Pee  pee", function()
+CheatSec:NewButton("Pro piece", "Auto farm go brrr", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/ProPiecePro'),true))()
 end)
 
-CheatSec:NewButton("FNF", "ca   ca", function()
-    CheatSec:NewButton("Pro piece", "Pee  pee", function()
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/ProPiecePro'),true))()
-end)
-end)
-
---Settings--
-
-local SetTab = Window:NewTab("Settings")
-
-local SetSection = SetTab:NewSection("Settings")
-
-SetSection:NewButton("AntiLock", "Prevents the user from being locked onto", function()
-  local plr = game.Players.LocalPlayer
-local Chara = plr.Character
-local Move = -10
-for i , p in pairs(Chara:GetChildren()) do
-while wait(.1) do
-	if p.Name == "Head" then
-p.CanCollide = true
-end
-end
-	if p.Name == "Torso" then
-	while wait(.1) do
-		for i , a in pairs(p:GetChildren()) do
-			if a.Name == "Neck" and a:IsA("Motor6D") then
-				a.C0 = CFrame.new(0,Move * 10,100)
-			end
-		end
-end
-	end
-end
+CheatSec:NewButton("Bedwars", "Hacky hacky", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 end)
