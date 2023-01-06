@@ -13,6 +13,60 @@ end)
 UniSection:NewSlider("Jump", "BOINGGG!!", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
+UniSection:NewButton("Flying", "You fly with alt", function()
+local run = game:GetService("RunService")
+
+local user = game:GetService("UserInputService")
+
+local Char = game.Players.LocalPlayer.Character
+
+local hrp = Char:WaitForChild("HumanoidRootPart")
+
+local camera = workspace.CurrentCamera
+
+local bodpos = Instance.new("BodyPosition",hrp)
+
+bodpos.MaxForce = Vector3.new()
+
+bodpos.D = 0
+
+local bodyg = Instance.new("BodyGyro",hrp)
+
+bodyg.MaxTorque = Vector3.new()
+
+bodyg.D = 10
+
+local speed = 1
+
+function Fly()
+	bodpos.MaxForce = Vector3.new(100000,100000,100000)
+	bodyg.MaxTorque = Vector3.new(100000,100000,100000)
+	run:BindToRenderStep("FLY",1,function()
+		bodpos.Position = hrp.Position + ((hrp.Position - camera.CFrame.p).Unit * speed)
+		bodyg.CFrame = CFrame.new(camera.CFrame.p,hrp.Position)
+	end)
+
+end
+
+local Press
+
+user.InputBegan:Connect(function(a)
+	if a.KeyCode == Enum.KeyCode.Space then
+		if Press and tick() - Press < 0.5 then
+			Fly()
+		end
+		Press = tick()
+	end
+	
+end)
+user.InputEnded:Connect(function(a)
+	if a.KeyCode == Enum.KeyCode.Space then
+		run:UnbindFromRenderStep("FLY")
+		bodpos.MaxForce = Vector3.new()
+		bodyg.MaxTorque = Vector3.new()
+	end
+	end)
+end)
 
 --Cheats--
 
